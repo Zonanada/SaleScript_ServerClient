@@ -11,13 +11,13 @@ function sendScript(mail, nameScript) {
     port: 465,
     secure: true,
     auth: {
-      user: 'eexa44ple@yandex.ru',
-      pass: '6626553000',
+      user: 'scriptForm@yandex.ru',
+      pass: '6626553000d',
     },
   })
 
   transporter.sendMail({
-    from: 'Скрипт продаж <eexa44ple@yandex.ru>',
+    from: '<scriptForm@yandex.ru>',
     to: mail,
     subject: 'Готовый скрипт продаж',
     text: 'Скрипт готов!',
@@ -32,5 +32,3 @@ function sendScript(mail, nameScript) {
 }
 
 module.exports = sendScript;
-
-
