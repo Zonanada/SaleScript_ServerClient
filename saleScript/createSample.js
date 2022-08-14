@@ -62,7 +62,7 @@ function definitionNeed(dataScript) {
       workbook.find(/%ВремяРазговора%+/g, match => dataScript.meetingTime)
       return workbook.toFileAsync(`./saleScript/readySimple/${dataScript.title}.xlsx`);
     });
-  setTimeout(sendScript(dataScript.mail, dataScript.title), 5000);
+  sendScript(dataScript.mail, dataScript.title)
   // fs.unlink(`/script/*.xlsx`, function(){})
 }
 
@@ -77,7 +77,7 @@ function selectionSaleProduct(dataScript) {
       workbook.find(/%ЭтапыОформления%+/g, match => dataScript.stagesOfRegistration)
       return workbook.toFileAsync(`./saleScript/readySimple/${dataScript.title}.xlsx`);
     });
-  setTimeout(sendScript(dataScript.mail, dataScript.title), 5000)
+  sendScript(dataScript.mail, dataScript.title)
 }
 
 function sendingCommercialOffer(dataScript) {
@@ -90,7 +90,7 @@ function sendingCommercialOffer(dataScript) {
       workbook.find(/%Потребность%+/g, match => dataScript.need)
       return workbook.toFileAsync(`./saleScript/readySimple/${dataScript.title}.xlsx`);
     });
-  setTimeout(sendScript(dataScript.mail, dataScript.title), 5000)
+  sendScript(dataScript.mail, dataScript.title)
 }
 
 function useMitingPickUpOfflineOurOffice(dataScript) {
@@ -104,7 +104,7 @@ function useMitingPickUpOfflineOurOffice(dataScript) {
       workbook.find(/%ВремяНаВстречу%+/g, match => dataScript.meetingTime)
       return workbook.toFileAsync(`./saleScript/readySimple/${dataScript.title}.xlsx`);
     });
-  setTimeout(sendScript(dataScript.mail, dataScript.title), 5000)
+  sendScript(dataScript.mail, dataScript.title)
 
 }
 
@@ -118,7 +118,7 @@ function useMitingPickUpOfflineСlientOffice(dataScript) {
       workbook.find(/%ВремяНаВстречу%+/g, match => dataScript.meetingTime)
       return workbook.toFileAsync(`./saleScript/readySimple/${dataScript.title}.xlsx`);
     });
-  setTimeout(sendScript(dataScript.mail, dataScript.title), 5000)
+  sendScript(dataScript.mail, dataScript.title)
 
 }
 
@@ -132,7 +132,7 @@ function useMitingPickUpOfflineNoMatterWhere(dataScript) {
       workbook.find(/%ВремяНаВстречу%+/g, match => dataScript.meetingTime)
       return workbook.toFileAsync(`./saleScript/readySimple/${dataScript.title}.xlsx`);
     });
-  setTimeout(sendScript(dataScript.mail, dataScript.title), 5000)
+  sendScript(dataScript.mail, dataScript.title)
 
 }
 
@@ -147,7 +147,7 @@ function useMitingPickUpOnline(dataScript) {
       workbook.find(/%ВремяНаВстречу%+/g, match => dataScript.meetingTime)
       return workbook.toFileAsync(`./saleScript/readySimple/${dataScript.title}.xlsx`);
     });
-  setTimeout(sendScript(dataScript.mail, dataScript.title), 5000)
+  sendScript(dataScript.mail, dataScript.title)
 }
 
 
@@ -161,7 +161,7 @@ function useMitingPickUpNoMatterWhere(dataScript) {
       workbook.find(/%ВремяНаВстречу%+/g, match => dataScript.meetingTime)
       return workbook.toFileAsync(`./saleScript/readySimple/${dataScript.title}.xlsx`);
     });
-  setTimeout(sendScript(dataScript.mail, dataScript.title), 5000)
+  sendScript(dataScript.mail, dataScript.title)
 }
 
 function useMitingProductPresentationOfflineOurOffice(dataScript) {
@@ -176,7 +176,7 @@ function useMitingProductPresentationOfflineOurOffice(dataScript) {
       workbook.find(/%ВремяНаВстречу%+/g, match => dataScript.meetingTime)
       return workbook.toFileAsync(`./saleScript/readySimple/${dataScript.title}.xlsx`);
     });
-  setTimeout(sendScript(dataScript.mail, dataScript.title), 5000)
+  sendScript(dataScript.mail, dataScript.title)
 }
 
 function useMitingProductPresentationOfflineClientOffice(dataScript) {
@@ -190,7 +190,7 @@ function useMitingProductPresentationOfflineClientOffice(dataScript) {
       workbook.find(/%ВремяНаВстречу%+/g, match => dataScript.meetingTime)
       return workbook.toFileAsync(`./saleScript/readySimple/${dataScript.title}.xlsx`);
     });
-  setTimeout(sendScript(dataScript.mail, dataScript.title), 5000)
+  sendScript(dataScript.mail, dataScript.title)
 }
 
 function useMitingProductPresentationOfflineNoMatterWhere(dataScript) {
@@ -204,7 +204,7 @@ function useMitingProductPresentationOfflineNoMatterWhere(dataScript) {
       workbook.find(/%ВремяНаВстречу%+/g, match => dataScript.meetingTime)
       return workbook.toFileAsync(`./saleScript/readySimple/${dataScript.title}.xlsx`);
     });
-  setTimeout(sendScript(dataScript.mail, dataScript.title), 5000)
+  sendScript(dataScript.mail, dataScript.title)
 }
 
 function useMitingProductPresentationOnline(dataScript) {
@@ -219,7 +219,7 @@ function useMitingProductPresentationOnline(dataScript) {
       workbook.find(/%ВремяНаВстречу%+/g, match => dataScript.meetingTime)
       return workbook.toFileAsync(`./saleScript/readySimple/${dataScript.title}.xlsx`);
     });
-  setTimeout(sendScript(dataScript.mail, dataScript.title), 5000)
+  sendScript(dataScript.mail, dataScript.title)
 }
 
 
@@ -234,7 +234,7 @@ function useMitingProductPresentationNoMatterWhere(dataScript) {
       workbook.find(/%ВремяНаВстречу%+/g, match => dataScript.meetingTime)
       return workbook.toFileAsync(`./saleScript/readySimple/${dataScript.title}.xlsx`);
     });
-  setTimeout(sendScript(dataScript.mail, dataScript.title), 5000)
+  sendScript(dataScript.mail, dataScript.title)
 }
 
 module.exports = createSample;
