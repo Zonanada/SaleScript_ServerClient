@@ -4,7 +4,7 @@ import Mail from "./components/Mail";
 import Welcom from "./components/Welcom";
 import MissionCall from "./components/MissionCall";
 import DefinitionNeed from "./components/DefinitionNeed"
-import SelectionSaleProdukt from "./components/SelectionSaleProdukt"
+import SelectionSaleProduсt from "./components/SelectionSaleProduсt"
 import UseMiting from "./components/UseMiting"
 import UseMitingPickUp from "./components/UseMitingPickUp"
 import UseMitingPickUpOffline from "./components/UseMitingPickUpOffline"
@@ -63,13 +63,12 @@ function App() {
           if (dataScript.mission === 'Выявление потребностей (перед звонком с презентацией продукта)') {
             setState(state = 'definitionNeed');
           } else if (dataScript.mission === 'Подбор и продажа продукта (здесь и сейчас)') {
-            setState(state = 'selectionSaleProdukt');
+            setState(state = 'selectionSaleProduct');
           } else if (dataScript.mission === 'Назначение встречи (знакомство или презентация продукта)') {
             setState(state = 'useMiting');
           } else if (dataScript.mission === 'Отправка коммерческого предложения (здесь и сейчас)') {
             setState(state = 'sendingCommercialOffer');
           }
-          dataScript.sample = state
           pushHistory(state)
           break;
 
@@ -101,7 +100,6 @@ function App() {
           } else if (dataScript.meetingOption === 'Не важно где пройдёт встреча') {
             setState(state = 'useMitingProductPresentationOfflineNoMatterWhere')
           }
-          dataScript.sample = state
           pushHistory(state)
           break;
 
@@ -124,7 +122,6 @@ function App() {
           } else if (dataScript.meetingOption === 'Не важно где пройдёт встреча') {
             setState(state = 'useMitingPickUpOfflineNoMatterWhere');
           }
-          dataScript.sample = state
           pushHistory(state)
           break;
 
@@ -158,9 +155,11 @@ function App() {
       case 'missionCall':
         return <MissionCall />;
       case 'definitionNeed':
+        dataScript.sample = 'definitionNeed';
         return <DefinitionNeed />;
-      case 'selectionSaleProdukt':
-        return <SelectionSaleProdukt />;
+      case 'selectionSaleProduct':
+        dataScript.sample = 'selectionSaleProduct';
+        return <SelectionSaleProduсt />;
       case 'useMiting':
         return <UseMiting />;
       case 'useMitingPickUp':
@@ -168,37 +167,48 @@ function App() {
       case 'useMitingPickUpOffline':
         return <UseMitingPickUpOffline />;
       case 'useMitingPickUpOfflineOurOffice':
+        dataScript.sample = 'useMitingPickUpOfflineOurOffice';
         return <UseMitingPickUpOfflineOurOffice />;
       case 'useMitingPickUpOfflineСlientOffice':
+        dataScript.sample = 'useMitingPickUpOfflineСlientOffice';
         return <UseMitingPickUpOfflineСlientOffice />;
       case 'useMitingPickUpOfflineNoMatterWhere':
+        dataScript.sample = 'useMitingPickUpOfflineNoMatterWhere';
         return <UseMitingPickUpOfflineNoMatterWhere />;
       case 'useMitingPickUpOnline':
+        dataScript.sample = 'useMitingPickUpOnline';
         return <UseMitingPickUpOnline />;
       case 'useMitingPickUpNoMatterWhere':
+        dataScript.sample = 'useMitingPickUpNoMatterWhere';
         return <UseMitingPickUpNoMatterWhere />;
       case 'useMitingProductPresentation':
         return <UseMitingProductPresentation />;
       case 'useMitingProductPresentationOffline':
         return <UseMitingProductPresentationOffline />;
       case 'useMitingProductPresentationOfflineOurOffice':
+        dataScript.sample = 'useMitingProductPresentationOfflineOurOffice'
         return <UseMitingProductPresentationOfflineOurOffice />;
       case 'useMitingProductPresentationOfflineClientOffice':
+        dataScript.sample = 'useMitingProductPresentationOfflineClientOffice';
         return <UseMitingProductPresentationOfflineClientOffice />;
       case 'useMitingProductPresentationOfflineNoMatterWhere':
+        dataScript.sample = 'useMitingProductPresentationOfflineNoMatterWhere';
         return <UseMitingProductPresentationOfflineNoMatterWhere />;
       case 'useMitingProductPresentationOnline':
+        dataScript.sample = 'useMitingProductPresentationOnline';
         return <UseMitingProductPresentationOnline />;
       case 'useMitingProductPresentationNoMatterWhere':
+        dataScript.sample = 'useMitingProductPresentationNoMatterWhere';
         return <UseMitingProductPresentationNoMatterWhere />;
       case 'sendingCommercialOffer':
+        dataScript.sample = 'sendingCommercialOffer';
         return <SendingCommercialOffer />;
       case 'finish':
         return <Finish />;
       case 'bye':
         return <Bye mail={dataScript.mail} />;
       default:
-        console.log('eror')
+        console.log('Simple empty - error!')
     }
   }
 

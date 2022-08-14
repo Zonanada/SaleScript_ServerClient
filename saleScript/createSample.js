@@ -44,7 +44,7 @@ function createSample(dataScript) {
         useMitingProductPresentationNoMatterWhere(dataScript)
         break;
       default:
-        console.log('default')
+        console.log('Back-end no sample! Error!')
         break;
     }
   }

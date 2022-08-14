@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SelectionSaleProdukt() {
+function SelectionSaleProduсt() {
   return (
     <div className='childRoot'>
         <h1>Подбор и продажа продукта (здесь и сейчас)</h1>
@@ -18,4 +18,4 @@ function SelectionSaleProdukt() {
   )
 }
 
-export default SelectionSaleProdukt
+export default SelectionSaleProduсt
