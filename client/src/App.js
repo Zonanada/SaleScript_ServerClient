@@ -26,17 +26,21 @@ import Bye from "./components/Bye";
 import EmptyLine from "./components/EmptyLine"
 
 import './styles/App.css';
+import Password from "./components/Password";
 
 export const dataScript = {};
 
 function App() {
-  let [state, setState] = useState('start');
-  let [history, setHistory] = useState(['start'])
+  let [state, setState] = useState('password');
+  let [history, setHistory] = useState(['password'])
   let [further, setFurther] = useState('Далее')
   let [fillInInput, setfillInInput] = useState(false)
+  let [corPassword, setPassword] = useState(false);
   let emptyInput = [];
 
+
   function logic() {
+    console.log(dataScript.password);
     let emptyIput = pushData()
     if (emptyIput) {
       setfillInInput(fillInInput = true)
@@ -46,6 +50,15 @@ function App() {
     } else {
       setfillInInput(fillInInput = false)
       switch (state) {
+        case 'password':
+          pushData()
+          if (dataScript.password == 1234) {
+            setState(state = 'start');
+            pushHistory(state);
+          }else {
+            setPassword(corPassword = true);
+          }
+          break;
         case 'start':
           pushData()
           setState(state = 'mail');
@@ -146,6 +159,8 @@ function App() {
 
   function createElements() {
     switch (state) {
+      case 'password':
+          return <Password incorrect={corPassword} />
       case 'start':
         return <Start />;
       case 'mail':
@@ -277,7 +292,7 @@ function App() {
   return (
     <div>
       {createElements()}
-      <EmptyLine empty = {fillInInput} />
+      <EmptyLine empty={fillInInput} />
       <div className="btn">
         <button onClick={back}>Назад</button>
         <button onClick={logic}>{further}</button>
