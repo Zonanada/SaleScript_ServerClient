@@ -40,7 +40,6 @@ function App() {
 
 
   function logic() {
-    console.log(dataScript.password);
     let emptyIput = pushData()
     if (emptyIput) {
       setfillInInput(fillInInput = true)
@@ -55,7 +54,7 @@ function App() {
           if (dataScript.password == 1234) {
             setState(state = 'start');
             pushHistory(state);
-          }else {
+          } else {
             setPassword(corPassword = true);
           }
           break;
@@ -160,7 +159,7 @@ function App() {
   function createElements() {
     switch (state) {
       case 'password':
-          return <Password incorrect={corPassword} />
+        return <Password incorrect={corPassword} />
       case 'start':
         return <Start />;
       case 'mail':
@@ -234,7 +233,7 @@ function App() {
   }
 
   function back() {
-    if (state !== 'start') {
+    if (state !== 'start' && state !== 'password') {
       let copy = Object.assign([], history);
       if (copy[copy.length - 1] !== 'finish') {
         setFurther(further = 'Далее');

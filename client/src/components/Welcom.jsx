@@ -3,9 +3,10 @@ import React from 'react'
 function Welcom() {
     return (
         <div className='childRoot'>
-            <h1>Приветсвие</h1>
+            <h1>Приветствие</h1>
             <div className='border'>
                 <p>Напишите должность сотрудника, который звонит</p>
+                <p className='example'>Например: менеджер, специалист, администратор. Пишем должность с маленькой буквы. Точку в конце не ставим.</p>
                 <div className='input' id="position" contentEditable="true"></div>
             </div>
             <div className='border'>
@@ -15,6 +16,7 @@ function Welcom() {
             </div>
             <div className='border'>
                 <p>Напишите название вашей организации</p>
+                <div className="example">Например: компании, салона красоты, юридической фирмы. Пишем в родительном падеже с маленькой буквы. Точку в конце не ставим.</div>
                 <div className='input' id="title" contentEditable="true"></div>
             </div>
 
