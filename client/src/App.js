@@ -4,7 +4,7 @@ import Mail from "./components/Mail";
 import Welcom from "./components/Welcom";
 import MissionCall from "./components/MissionCall";
 import DefinitionNeed from "./components/DefinitionNeed"
-import SelectionSaleProduсt from "./components/SelectionSaleProduсt"
+import SelectionSaleProduct from "./components/SelectionSaleProduсt"
 import UseMiting from "./components/UseMiting"
 import UseMitingPickUp from "./components/UseMitingPickUp"
 import UseMitingPickUpOffline from "./components/UseMitingPickUpOffline"
@@ -37,6 +37,25 @@ function App() {
   let [fillInInput, setfillInInput] = useState(false)
   let [corPassword, setPassword] = useState(false);
   let emptyInput = [];
+
+  let [mail, setMail] = useState("");
+  let [welcom, setWelcom] = useState({
+    position: "",
+    form: "",
+    title: ""
+  });
+  let [missionCall, setMissionCall] = useState("");
+  let [definitionNeed, setDefinitionNeed] = useState({
+    need: "",
+    readyTime: "",
+    meetingTime: "",
+  })
+  let [selectionSaleProduсt, setSelectionSaleProduсt] = useState({
+    need: "",
+    stagesOfRegistration: "",
+  })
+
+
 
 
   function logic() {
@@ -163,17 +182,16 @@ function App() {
       case 'start':
         return <Start />;
       case 'mail':
-        return <Mail />;
+        return <Mail mail={mail} />;
       case 'welcom':
-        return <Welcom />;
+        return <Welcom welcom = {welcom} />;
       case 'missionCall':
-        return <MissionCall />;
+        return <MissionCall missionCall = {missionCall} />;
       case 'definitionNeed':
         dataScript.sample = 'definitionNeed';
-        return <DefinitionNeed />;
+        return <DefinitionNeed definitionNeed = {definitionNeed} />;
       case 'selectionSaleProduct':
-        dataScript.sample = 'selectionSaleProduct';
-        return <SelectionSaleProduсt />;
+        return <SelectionSaleProduct selectionSaleProduct = {selectionSaleProduсt}/>;
       case 'useMiting':
         return <UseMiting />;
       case 'useMitingPickUp':
@@ -250,7 +268,6 @@ function App() {
     let inputDiv = document.querySelectorAll('.input')
 
     for (let i = 0; i < inputDiv.length; i++) {
-      const exp = /\s/;
       dataScript[inputDiv[i].id] = inputDiv[i].innerText
       if (dataScript[inputDiv[i].id] == '') {
         empty = true
@@ -263,10 +280,43 @@ function App() {
         dataScript[inputArr[i].name] = inputArr[i].value
       }
     }
+    monitoringState();
 
     return empty;
-    // console.log(dataScript);
   }
+
+  function monitoringState() {
+    switch (state) {
+      case 'mail':
+        setMail(mail = dataScript.mail);
+        break;
+      case 'welcom':
+        setWelcom({
+          position: dataScript.position,
+          form: dataScript.form,
+          title: dataScript.title
+        });
+        break;
+      case 'missionCall':
+        setMissionCall(missionCall = dataScript.activity);
+        break;
+      case 'definitionNeed':
+        setDefinitionNeed({
+          need: dataScript.need,
+          readyTime: dataScript.readyTime,
+          meetingTime: dataScript.meetingTime,
+        })
+        break;
+      case 'selectionSaleProduct':
+        console.log(state);
+        setSelectionSaleProduсt({
+          need: dataScript.need,
+          stagesOfRegistration: dataScript.stagesOfRegistration
+        })
+        break;
+    }
+  }
+
 
   function delBtn() {
     let btn = document.querySelector(".btn")

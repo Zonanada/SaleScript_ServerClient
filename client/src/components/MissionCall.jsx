@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function MissionCall() {
+export default function MissionCall(props) {
   return (
     <div className='childRoot'>
       <h1>Цель звонка</h1>
@@ -28,7 +28,7 @@ export default function MissionCall() {
           Взаимодействуя напрямую с департаментом транспорта, имеем очень быстрое оформление и высокую степень одобрения 99%.
           Поэтому наши клиенты не теряют деньги в ожидании пропусков.
         </p>
-        <div className='input' id="activity" contentEditable="true"></div>
+        <div className='input' id="activity" contentEditable="true">{props.missionCall}</div>
       </div>
       <div className='border'>
         <p>Напишите цель данного звонка</p>
