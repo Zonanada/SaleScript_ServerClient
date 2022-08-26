@@ -54,6 +54,40 @@ function App() {
     need: "",
     stagesOfRegistration: "",
   })
+  let [useMitingPickUpOfflineOurOffice, setUseMitingPickUpOfflineOurOffice] = useState({
+    officeAdress: "",
+    meetingTime: ""
+  })
+  let [useMitingPickUpOfflineСlientOffice, setUseMitingPickUpOfflineСlientOffice] = useState("")
+  let [useMitingPickUpOfflineNoMatterWhere, setUseMitingPickUpOfflineNoMatterWhere] = useState("")
+  let [useMitingPickUpOnline, setUseMitingPickUpOnline] = useState({
+    communicationApp: "",
+    meetingTime: "",
+  });
+  let [useMitingPickUpNoMatterWhere, setUseMitingPickUpNoMatterWhere] = useState("");
+  let [useMitingProductPresentationOfflineOurOffice, setUseMitingProductPresentationOfflineOurOffice] = useState({
+    need: "",
+    officeAdress: "",
+    meetingTime: ""
+  })
+  let [useMitingProductPresentationOfflineClientOffice, setUseMitingProductPresentationOfflineClientOffice] = useState({
+    need: "",
+    meetingTime: ""
+  })
+  let [useMitingProductPresentationNoMatterWhere, setUseMitingProductPresentationNoMatterWhere] = useState({
+    need: "",
+    meetingTime: ""
+  })
+  let [useMitingProductPresentationOnline, setUseMitingProductPresentationOnline] = useState({
+    need: "",
+    communicationApp: "",
+    meetingTime: ""
+  })
+  let [useMitingProductPresentationOfflineNoMatterWhere, setUseMitingProductPresentationOfflineNoMatterWhere] = useState({
+    need: "",
+    meetingTime: ""
+  })
+  let [sendingCommercialOffer, setSendingCommercialOffer] = useState("")
 
 
 
@@ -184,14 +218,14 @@ function App() {
       case 'mail':
         return <Mail mail={mail} />;
       case 'welcom':
-        return <Welcom welcom = {welcom} />;
+        return <Welcom welcom={welcom} />;
       case 'missionCall':
-        return <MissionCall missionCall = {missionCall} />;
+        return <MissionCall missionCall={missionCall} />;
       case 'definitionNeed':
         dataScript.sample = 'definitionNeed';
-        return <DefinitionNeed definitionNeed = {definitionNeed} />;
+        return <DefinitionNeed definitionNeed={definitionNeed} />;
       case 'selectionSaleProduct':
-        return <SelectionSaleProduct selectionSaleProduct = {selectionSaleProduсt}/>;
+        return <SelectionSaleProduct selectionSaleProduct={selectionSaleProduсt} />;
       case 'useMiting':
         return <UseMiting />;
       case 'useMitingPickUp':
@@ -200,41 +234,41 @@ function App() {
         return <UseMitingPickUpOffline />;
       case 'useMitingPickUpOfflineOurOffice':
         dataScript.sample = 'useMitingPickUpOfflineOurOffice';
-        return <UseMitingPickUpOfflineOurOffice />;
+        return <UseMitingPickUpOfflineOurOffice useMitingPickUpOfflineOurOffice={useMitingPickUpOfflineOurOffice} />;
       case 'useMitingPickUpOfflineСlientOffice':
         dataScript.sample = 'useMitingPickUpOfflineСlientOffice';
-        return <UseMitingPickUpOfflineСlientOffice />;
+        return <UseMitingPickUpOfflineСlientOffice useMitingPickUpOfflineСlientOffice={useMitingPickUpOfflineСlientOffice} />;
       case 'useMitingPickUpOfflineNoMatterWhere':
         dataScript.sample = 'useMitingPickUpOfflineNoMatterWhere';
-        return <UseMitingPickUpOfflineNoMatterWhere />;
+        return <UseMitingPickUpOfflineNoMatterWhere useMitingPickUpOfflineNoMatterWhere={useMitingPickUpOfflineNoMatterWhere} />;
       case 'useMitingPickUpOnline':
         dataScript.sample = 'useMitingPickUpOnline';
-        return <UseMitingPickUpOnline />;
+        return <UseMitingPickUpOnline useMitingPickUpOnline={useMitingPickUpOnline} />;
       case 'useMitingPickUpNoMatterWhere':
         dataScript.sample = 'useMitingPickUpNoMatterWhere';
-        return <UseMitingPickUpNoMatterWhere />;
+        return <UseMitingPickUpNoMatterWhere useMitingPickUpNoMatterWhere={useMitingPickUpNoMatterWhere} />;
       case 'useMitingProductPresentation':
         return <UseMitingProductPresentation />;
       case 'useMitingProductPresentationOffline':
         return <UseMitingProductPresentationOffline />;
       case 'useMitingProductPresentationOfflineOurOffice':
         dataScript.sample = 'useMitingProductPresentationOfflineOurOffice'
-        return <UseMitingProductPresentationOfflineOurOffice />;
+        return <UseMitingProductPresentationOfflineOurOffice useMitingProductPresentationOfflineOurOffice={useMitingProductPresentationOfflineOurOffice} />;
       case 'useMitingProductPresentationOfflineClientOffice':
         dataScript.sample = 'useMitingProductPresentationOfflineClientOffice';
-        return <UseMitingProductPresentationOfflineClientOffice />;
+        return <UseMitingProductPresentationOfflineClientOffice useMitingProductPresentationOfflineClientOffice={useMitingProductPresentationOfflineClientOffice} />;
       case 'useMitingProductPresentationOfflineNoMatterWhere':
         dataScript.sample = 'useMitingProductPresentationOfflineNoMatterWhere';
-        return <UseMitingProductPresentationOfflineNoMatterWhere />;
+        return <UseMitingProductPresentationOfflineNoMatterWhere useMitingProductPresentationOfflineNoMatterWhere={useMitingProductPresentationOfflineNoMatterWhere} />;
       case 'useMitingProductPresentationOnline':
         dataScript.sample = 'useMitingProductPresentationOnline';
-        return <UseMitingProductPresentationOnline />;
+        return <UseMitingProductPresentationOnline useMitingProductPresentationOnline={useMitingProductPresentationOnline} />;
       case 'useMitingProductPresentationNoMatterWhere':
         dataScript.sample = 'useMitingProductPresentationNoMatterWhere';
-        return <UseMitingProductPresentationNoMatterWhere />;
+        return <UseMitingProductPresentationNoMatterWhere useMitingProductPresentationNoMatterWhere={useMitingProductPresentationNoMatterWhere} />;
       case 'sendingCommercialOffer':
         dataScript.sample = 'sendingCommercialOffer';
-        return <SendingCommercialOffer />;
+        return <SendingCommercialOffer sendingCommercialOffer={sendingCommercialOffer} />;
       case 'finish':
         return <Finish />;
       case 'bye':
@@ -308,12 +342,66 @@ function App() {
         })
         break;
       case 'selectionSaleProduct':
-        console.log(state);
         setSelectionSaleProduсt({
           need: dataScript.need,
           stagesOfRegistration: dataScript.stagesOfRegistration
         })
+      case 'useMitingPickUpOfflineOurOffice':
+        setUseMitingPickUpOfflineOurOffice({
+          officeAdress: dataScript.officeAdress,
+          meetingTime: dataScript.meetingTime
+        })
         break;
+      case 'useMitingPickUpOfflineСlientOffice':
+        setUseMitingPickUpOfflineСlientOffice(useMitingPickUpOfflineСlientOffice = dataScript.meetingTime);
+        break;
+      case 'useMitingPickUpOfflineNoMatterWhere':
+        setUseMitingPickUpOfflineNoMatterWhere(useMitingPickUpOfflineNoMatterWhere = dataScript.meetingTime)
+        break;
+      case 'useMitingPickUpOnline':
+        setUseMitingPickUpOnline({
+          communicationApp: dataScript.communicationApp,
+          meetingTime: dataScript.meetingTime,
+        })
+        break;
+      case 'useMitingPickUpNoMatterWhere':
+        setUseMitingPickUpNoMatterWhere(useMitingPickUpNoMatterWhere = dataScript.meetingTime);
+        break;
+      case 'useMitingProductPresentationOfflineOurOffice':
+        setUseMitingProductPresentationOfflineOurOffice({
+          need: dataScript.need,
+          officeAdress: dataScript.officeAdress,
+          meetingTime: dataScript.meetingTime
+        })
+        break;
+      case 'useMitingProductPresentationOfflineClientOffice':
+        setUseMitingProductPresentationOfflineClientOffice({
+          need: dataScript.need,
+          meetingTime: dataScript.meetingTime
+        })
+        break;
+      case 'useMitingProductPresentationNoMatterWhere':
+        setUseMitingProductPresentationNoMatterWhere({
+          need: dataScript.need,
+          meetingTime: dataScript.meetingTime
+        })
+        break;
+      case 'useMitingProductPresentationOnline':
+        setUseMitingProductPresentationOnline({
+          need: dataScript.need,
+          communicationApp: dataScript.communicationApp,
+          meetingTime: dataScript.meetingTime
+        })
+        break;
+      case 'useMitingProductPresentationOfflineNoMatterWhere':
+        setUseMitingProductPresentationOfflineNoMatterWhere({
+          need: dataScript.need,
+          meetingTime: dataScript.meetingTime
+        })
+        break;
+      case 'sendingCommercialOffer':
+        setSendingCommercialOffer(sendingCommercialOffer = dataScript.need)
+        break
     }
   }
 
