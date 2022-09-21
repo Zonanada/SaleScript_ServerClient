@@ -1,6 +1,6 @@
 * {
-    font-size: 18px;
-    font-family: monospace;
+    font-size: 17px;
+    font-family: 'Rubik', sans-serif;
     background-color: rgb(240, 235, 248);
 }
 
@@ -93,13 +93,21 @@ button:hover {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .example {
     margin: 0;
     font-size: 14px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+.tit{
+    background-color: white;
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
 }
 
 .comment {
@@ -107,14 +115,14 @@ h1 {
     border-bottom: 2px solid rgb(240, 235, 248);
     padding: 15px 0 15px 0;
     margin: 15px 0 15px 0;
-    font-size: 16px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-style: italic;
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
 }
 
-span {
+/* span {
     font-size: 15px;
-}
+} */
 
 .border p {
     background-color: white;
@@ -132,3 +140,5 @@ input[type="radio"] {
     margin-right: 1%;
     color: white;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
