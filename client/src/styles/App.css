@@ -120,6 +120,16 @@ h1 {
     font-weight: 300;
 }
 
+.comment p {
+    padding: 15px 0 0 0;
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 100;
+}
+
+.fatty {
+    font-weight: 400;
+}
 /* span {
     font-size: 15px;
 } */
@@ -127,13 +137,11 @@ h1 {
 .border p {
     background-color: white;
     margin: 5px auto 5px auto;
-
 }
 
 .border div {
     background-color: white;
 }
-
 
 input[type="radio"] {
     width: auto;
