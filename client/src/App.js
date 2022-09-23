@@ -31,7 +31,7 @@ import Password from "./components/Password";
 export const dataScript = {};
 
 function App() {
-  let [state, setState] = useState('missionCall');
+  let [state, setState] = useState('password');
   let [history, setHistory] = useState(['password'])
   let [further, setFurther] = useState('Далее')
   let [fillInInput, setfillInInput] = useState(false)
