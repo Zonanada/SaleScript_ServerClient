@@ -48,7 +48,14 @@ function UseMitingProductPresentationOnline(props) {
         </div>
         <div className="border">
             <p>Напишите какое приложение вы будете использовать для связи с клиентом</p>
-            <p className='example'><span className='fatty'>Например:</span> Zoom, Google Meet, Skype</p>
+            <p className='example'>
+            <p>
+              <span className='fatty'>Например:</span>
+            </p>
+            <p>
+              Zoom, Google Meet, Skype
+            </p>
+            </p>
             <div className='input' id="communicationApp" contentEditable="true">{props.useMitingProductPresentationOnline.communicationApp}</div>
         </div>
         <div className="border">

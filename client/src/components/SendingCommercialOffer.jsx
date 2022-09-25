@@ -3,7 +3,7 @@ import React from 'react'
 function SendingCommercialOffer(props) {
   return (
     <div className='childRoot'>
-        <h1>Отправка коммерческого предложения</h1>
+        <h1>Отправка коммерческого предложения здесь и сейчас</h1>
         <div className='border'>
             <p>Напишите вопросы, выявляющие потребность, которые нужно задать клиенту, в той последовательности, в которой вы их будете задавать</p>
             <p className='comment'>
