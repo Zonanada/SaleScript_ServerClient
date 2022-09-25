@@ -43,7 +43,14 @@ function UseMitingProductPresentationOfflineClientOffice(props) {
                 Получив как можно больше информации, вы сможете подобрать именно то, что хочет клиент и сама продажа будет максимально целевой - вы продаете то, что хочет купить клиент.
               </p>
             </p>
-            <p className='example'><p><span className='fatty'>Например:</span></p> Какой транспорт хотите застраховать? На какой срок обычно страхуете транспорт? Какие проблемы обычно возникают при страховании и дальнейшем использовании?</p>
+            <p className='example'>
+              <p>
+                <span className='fatty'>Например:</span>
+              </p>
+              <p> 
+                Какой транспорт хотите застраховать? На какой срок обычно страхуете транспорт? Какие проблемы обычно возникают при страховании и дальнейшем использовании?
+              </p>
+              </p>
             <div className='input' id="need" contentEditable="true">{props.useMitingProductPresentationOfflineClientOffice.need}</div>
         </div>
         <div className="border">
@@ -59,7 +66,12 @@ function UseMitingProductPresentationOfflineClientOffice(props) {
               </p>
 
             </p>
-            <p className='example'><span className='fatty'>Например:</span> 1 час</p>
+            <p className='example'>
+              <p><span className='fatty'>Например:</span>
+              </p>
+              <p>
+                1 час
+              </p></p>
            <div className='input' id="meetingTime" contentEditable="true">{props.useMitingProductPresentationOfflineClientOffice.meetingTime}</div>
         </div>
     </div>

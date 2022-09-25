@@ -6,7 +6,14 @@ function UseMitingPickUpOfflineOurOffice(props) {
         <h1>Назначение встречи. Знакомство. Offline. Наш офис</h1>
         <div className='border'>
             <p>Напишите адрес вашего офиса</p>
-            <p className='example'><span className='fatty'>Например:</span> Невский проспект, дом 35, БЦ Атриум</p>
+            <p className='example'>
+              <p>
+                <span className='fatty'>Например:</span>
+              </p>
+              <p>
+                Невский проспект, дом 35, БЦ Атриум
+              </p>
+              </p>
             <div className='input' id="officeAdress" contentEditable="true">{props.useMitingPickUpOfflineOurOffice.officeAdress}</div>
         </div>
         <div className='border'>
@@ -20,9 +27,15 @@ function UseMitingPickUpOfflineOurOffice(props) {
               <br/>Во-вторых, это важная фраза, позволяющая минимизировать возражение на следующем звонке “Давайте быстрее, у меня не так много времени” или что-то похожее. 
               <br/>Итого, клиент будет предупрежден о том, сколько необходимо выделить времени на встречу с вами, а вы будете иметь достаточно времени, чтобы осуществить продажу.
               </p>
-
             </p>
-            <p className='example'><span className='fatty'>Например:</span> 1 час</p>
+            <p className='example'>
+              <p>
+                <span className='fatty'>Например:</span>
+              </p>
+              <p>
+                1 час
+              </p>
+              </p>
             <div className='input' id="meetingTime" contentEditable="true">{props.useMitingPickUpOfflineOurOffice.meetingTime}</div>
         </div>
     </div>

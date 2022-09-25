@@ -64,7 +64,14 @@ function UseMitingProductPresentationOnline(props) {
               </p>
 
             </p>
-            <p className='example'><span className='fatty'>Например:</span> 1 час</p>
+            <p className='example'>
+              <p>
+                <span className='fatty'>Например:</span>
+              </p>
+              <p>
+                1 час
+              </p>
+              </p>
             <div className='input' id="meetingTime" contentEditable="true">{props.useMitingProductPresentationOnline.meetingTime}</div>
         </div>
     </div>

@@ -91,13 +91,24 @@ button:hover {
     background-color: white;
 }
 
+.border:first-child {
+    font-size: 18px;
+}
+
 h1 {
     font-size: 20px;
 }
 
 .example {
-    margin: 0;
-    font-size: 14px;
+    padding: 10px 0 0 0;
+    font-size: 12px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+.example p {
+    padding: 0 0 10px 0;
+    font-size: 12px;
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
 }
@@ -110,6 +121,7 @@ h1 {
 }
 
 .fatty {
+    font-size: 12px;
     font-weight: 500;
     background-color: white;
 }
@@ -119,14 +131,14 @@ h1 {
     border-bottom: 2px solid rgb(240, 235, 248);
     padding: 0 0 15px 0;
     /* margin: 15px 0 15px 0; */
-    font-size: 14px;
+    font-size: 12px;
     font-family: 'Rubik', sans-serif;
     /* font-weight: 300; */
 }
 
 .comment p {
     padding: 15px 0 0 0;
-    font-size: 14px;
+    font-size: 12px;
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
 }

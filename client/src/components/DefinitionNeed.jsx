@@ -3,7 +3,7 @@ import React from 'react'
 function DefinitionNeed(props) {
   return (
     <div className='childRoot'>
-        <h1>Выявление потребностей (перед звонком с презенацией продукта)</h1>
+        <h1>Выявление потребностей перед звонком с презенацией продукта</h1>
         <div className='border'>
             <p>Напишите вопросы, выявляющие потребность, которые нужно задать клиенту, в той последовательности, в которой вы их будете задавать</p>
             <p className='comment'>
@@ -60,10 +60,15 @@ function DefinitionNeed(props) {
               <p>
               Важно точно обозначить сколько времени вам потребуется на подготовку предложения. Сама фраза говорит клиенту о том, что вы будете тратить свое время на подбор продукта для него. 
               Таким образом, это возлагает некоторую ответственность на клиента, как минимум, взять трубку в следующий раз и выслушать вас. Также, важно, чтобы ваше предложение было готово как можно быстрее.
-              Помните, время между звонками должно быть максимально короткое, иначе клиента может перехватить конкурент.
+              <br/>Помните, время между звонками должно быть максимально короткое, иначе клиента может перехватить конкурент.
               </p>
             </p>
-            <p className='example'><span className='fatty'>Например: </span>1 день</p>
+            <p className='example'>
+                <p>
+                <span className='fatty'>Например:</span>
+                </p>
+                <p>1 день</p>
+                </p>
             <div className='input' id="readyTime" contentEditable="true">{props.definitionNeed.readyTime}</div>
 
         </div>
@@ -77,7 +82,13 @@ function DefinitionNeed(props) {
 
               </p>
             </p>
-            <p className='example'><span className='fatty'>Например: </span>15 минут</p>
+            <p className='example'>
+              <p>
+                <span className='fatty'>Например:</span></p>
+                <p>
+                  15 минут
+                </p>
+                </p>
             <div className='input' id="meetingTime" contentEditable="true">{props.definitionNeed.meetingTime}</div>
         </div>
 

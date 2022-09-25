@@ -6,7 +6,14 @@ function UseMitingPickUpOnline(props) {
         <h1>Назначение встречи. Знакомство. Online</h1>
         <div className='border'>
             <p>Напишите какое приложение вы будете использовать для связи с клиентом</p>
-            <p className='example'><span className='fatty'>Например:</span> Zoom, Google Meet, Skype</p>
+            <p className='example'>
+              <p>
+                <span className='fatty'>Например:</span>
+              </p>
+              <p>
+                Zoom, Google Meet, Skype
+              </p>
+              </p>
             <div className='input' id="communicationApp" contentEditable="true">{props.useMitingPickUpOnline.communicationApp}</div>
         </div>
         <div className='border'>
@@ -22,7 +29,12 @@ function UseMitingPickUpOnline(props) {
               </p>
 
             </p>
-            <p className='example'><span className='fatty'>Например:</span> 1 час</p>
+            <p className='example'>
+              <p><span className='fatty'>Например:</span></p>
+               <p>
+                1 час
+               </p>
+              </p>
             <div className='input' id="meetingTime" contentEditable="true">{props.useMitingPickUpOnline.meetingTime}</div>
         </div>
     </div>
