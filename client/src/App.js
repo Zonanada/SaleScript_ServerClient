@@ -1,4 +1,5 @@
-import React, { useState, useEffect} from "react";
+import React, { useState} from "react";
+import Favicon from 'react-favicon';
 import Start from "./components/Start";
 import Mail from "./components/Mail";
 import Welcom from "./components/Welcom";
@@ -433,6 +434,7 @@ function App() {
 
   return (
     <div>
+      <Favicon url='favicon.ico'/>
       {createElements()}
       <EmptyLine empty={fillInInput} />
       <div className="btn">
