@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import Start from "./components/Start";
 import Mail from "./components/Mail";
 import Welcom from "./components/Welcom";
@@ -24,9 +24,9 @@ import SendingCommercialOffer from "./components/SendingCommercialOffer"
 import Finish from "./components/Finish"
 import Bye from "./components/Bye";
 import EmptyLine from "./components/EmptyLine"
-
 import './styles/App.css';
 import Password from "./components/Password";
+
 
 export const dataScript = {};
 
@@ -202,6 +202,7 @@ function App() {
           setFurther(further = 'Завершить')
           pushHistory()
       }
+      window.scrollTo(0, 0);
     }
     // console.log(state)
     // console.log(history);
@@ -294,7 +295,9 @@ function App() {
       copy.pop()
       setHistory(copy)
       setfillInInput(fillInInput = false)
+      window.scrollTo(0, 0);
     }
+    
   }
 
   function pushData() {
@@ -425,6 +428,8 @@ function App() {
 
 
   }
+
+  
 
   return (
     <div>
