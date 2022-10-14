@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
+import Favicon from 'react-favicon';
 import Start from "./components/Start";
 import Mail from "./components/Mail";
 import Welcom from "./components/Welcom";
@@ -24,14 +25,14 @@ import SendingCommercialOffer from "./components/SendingCommercialOffer"
 import Finish from "./components/Finish"
 import Bye from "./components/Bye";
 import EmptyLine from "./components/EmptyLine"
-
 import './styles/App.css';
 import Password from "./components/Password";
+
 
 export const dataScript = {};
 
 function App() {
-  let [state, setState] = useState('missionCall');
+  let [state, setState] = useState('password');
   let [history, setHistory] = useState(['password'])
   let [further, setFurther] = useState('Далее')
   let [fillInInput, setfillInInput] = useState(false)
@@ -202,6 +203,7 @@ function App() {
           setFurther(further = 'Завершить')
           pushHistory()
       }
+      window.scrollTo(0, 0);
     }
     // console.log(state)
     // console.log(history);
@@ -294,7 +296,9 @@ function App() {
       copy.pop()
       setHistory(copy)
       setfillInInput(fillInInput = false)
+      window.scrollTo(0, 0);
     }
+    
   }
 
   function pushData() {
@@ -426,8 +430,11 @@ function App() {
 
   }
 
+  
+
   return (
     <div>
+      <Favicon url='favicon.ico'/>
       {createElements()}
       <EmptyLine empty={fillInInput} />
       <div className="btn">

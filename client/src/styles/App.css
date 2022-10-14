@@ -1,6 +1,6 @@
 * {
-    font-size: 18px;
-    font-family: monospace;
+    font-size: 17px;
+    font-family: 'Rubik', sans-serif;
     background-color: rgb(240, 235, 248);
 }
 
@@ -45,7 +45,6 @@ textarea {
     resize: none;
     box-sizing: border-box
 }
-
 
 .emptyIput {
     color: red;
@@ -92,46 +91,76 @@ button:hover {
     background-color: white;
 }
 
+.border:first-child {
+    font-size: 18px;
+}
+
 h1 {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .example {
-    margin: 0;
+    padding: 10px 0 0 0;
+    font-size: 12px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+.example p {
+    padding: 0 0 10px 0;
+    font-size: 12px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+.tit{
+    background-color: white;
     font-size: 14px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+
+.fatty {
+    font-size: 12px;
+    font-weight: 500;
+    background-color: white;
 }
 
 .comment {
     border-top: 2px solid rgb(240, 235, 248);
     border-bottom: 2px solid rgb(240, 235, 248);
-    padding: 15px 0 15px 0;
-    margin: 15px 0 15px 0;
-    font-size: 16px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}   
+    padding: 0 0 15px 0;
+    /* margin: 15px 0 15px 0; */
+    font-size: 12px;
+    font-family: 'Rubik', sans-serif;
+    /* font-weight: 300; */
+}
 
 .comment p {
     padding: 15px 0 0 0;
+    font-size: 12px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
 }
 
-span {
+
+/* span {
     font-size: 15px;
-}
+} */
 
 .border p {
     background-color: white;
     margin: 5px auto 5px auto;
-
 }
 
 .border div {
     background-color: white;
 }
 
-
 input[type="radio"] {
     width: auto;
     margin-right: 1%;
     color: white;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;300;400&display=swap');
