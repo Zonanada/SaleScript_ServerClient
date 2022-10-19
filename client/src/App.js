@@ -105,7 +105,7 @@ function App() {
       switch (state) {
         case 'password':
           pushData()
-          if (dataScript.password == 1234) {
+          if (dataScript.password == 208316) {
             setState(state = 'start');
             pushHistory(state);
           } else {
