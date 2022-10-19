@@ -227,6 +227,7 @@ function App() {
         dataScript.sample = 'definitionNeed';
         return <DefinitionNeed definitionNeed={definitionNeed} />;
       case 'selectionSaleProduct':
+        dataScript.sample = 'selectionSaleProduct';
         return <SelectionSaleProduct selectionSaleProduct={selectionSaleProduсt} />;
       case 'useMiting':
         return <UseMiting />;
@@ -429,8 +430,6 @@ function App() {
 
 
   }
-
-  
 
   return (
     <div>
