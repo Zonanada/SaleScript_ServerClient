@@ -32,8 +32,8 @@ import Password from "./components/Password";
 export const dataScript = {};
 
 function App() {
-  let [state, setState] = useState('password');
-  let [history, setHistory] = useState(['password'])
+  let [state, setState] = useState('start');
+  let [history, setHistory] = useState(['start'])
   let [further, setFurther] = useState('Далее')
   let [fillInInput, setfillInInput] = useState(false)
   let [corPassword, setPassword] = useState(false);
@@ -103,15 +103,15 @@ function App() {
     } else {
       setfillInInput(fillInInput = false)
       switch (state) {
-        case 'password':
-          pushData()
-          if (dataScript.password == 208316) {
-            setState(state = 'start');
-            pushHistory(state);
-          } else {
-            setPassword(corPassword = true);
-          }
-          break;
+        // case 'password':
+        //   pushData()
+        //   if (dataScript.password == 208316) {
+        //     setState(state = 'start');
+        //     pushHistory(state);
+        //   } else {
+        //     setPassword(corPassword = true);
+        //   }
+        //   break;
         case 'start':
           pushData()
           setState(state = 'mail');
